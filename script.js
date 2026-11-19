@@ -26,11 +26,11 @@ const CONFIG = {
   photos: [
     { src: "images/foto1.jpg", caption: "Il nostro primo viaggio", emoji: "✈️", size: "tall" },
     { src: "images/foto2.jpg", caption: "Tramonto al mare", emoji: "🌅", size: "", focus: "center 60%" },
-    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "", focus: "center 12%" },
+    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "tall", focus: "center" },
     { src: "images/foto4.jpg", caption: "Weekend in città", emoji: "🏛️", size: "wide", focus: "center 52%" },
     { src: "images/foto5.jpg", caption: "Cene tra amici", emoji: "🍝", size: "" },
     { src: "images/foto6.jpg", caption: "Road trip", emoji: "🚗", size: "tall" },
-    { src: "images/foto7.jpg", caption: "Il giorno della proposta", emoji: "💍", size: "wide" },
+    { src: "images/foto7.jpg", caption: "Il giorno della proposta", emoji: "💍", size: "" },
     { src: "images/foto8.jpg", caption: "Noi due", emoji: "❤️", size: "" },
   ],
 };
