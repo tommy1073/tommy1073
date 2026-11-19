@@ -51,3 +51,7 @@ In alternativa funziona anche un form gratuito di [Formspree](https://formspree.
 ## Pubblicazione gratis con GitHub Pages
 
 Nelle impostazioni del repository apri **Settings → Pages**, scegli il branch con questi file e la cartella `/ (root)`. Dopo un paio di minuti il sito è online.
+
+## Aggiornare il sito
+
+Dopo ogni modifica a `style.css` o `script.js`, cambia il numero dopo `?v=` nei due link in fondo e in cima a `index.html`: così i telefoni scaricano subito la versione nuova invece di quella salvata in memoria.
