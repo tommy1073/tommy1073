@@ -26,12 +26,12 @@ const CONFIG = {
   photos: [
     { src: "images/foto1.jpg", caption: "Il nostro primo viaggio", emoji: "✈️", size: "tall" },
     { src: "images/foto2.jpg", caption: "Tramonto al mare", emoji: "🌅", size: "", focus: "center 60%" },
-    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "tall", focus: "center" },
+    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "", focus: "center 20%" },
     { src: "images/foto5.jpg", caption: "Primo Natale in casa nostra", emoji: "🎄", size: "", focus: "center 65%" },
     { src: "images/foto7.jpg", caption: "Il giorno della proposta", emoji: "💍", size: "tall", focus: "32% center" },
-    { src: "images/foto6.jpg", caption: "Intesa filippina", emoji: "🌴", size: "", focus: "center 70%" },
-    { src: "images/foto4.jpg", caption: "Weekend in città", emoji: "🏛️", size: "", focus: "center 52%" },
     { src: "images/foto9.jpg", caption: "Passeggiate portoghesi", emoji: "🇵🇹", size: "", focus: "center 55%" },
+    { src: "images/foto6.jpg", caption: "Intesa filippina", emoji: "🌴", size: "tall", focus: "85% center" },
+    { src: "images/foto4.jpg", caption: "Weekend in città", emoji: "🏛️", size: "", focus: "center 52%" },
     { src: "images/foto8.jpg", caption: "Noi due", emoji: "❤️", size: "", focus: "center 75%" },
   ],
 };
