@@ -1,4 +1,4 @@
-# Tommaso & Margherita · 24.11.2027 🍁
+# Tommaso & Margherita · 24.04.2027 🌸
 
 Il sito del nostro matrimonio. È un sito statico (HTML, CSS e JavaScript, senza dipendenze): basta aprire `index.html` nel browser.
 
@@ -10,7 +10,7 @@ Il sito del nostro matrimonio. È un sito statico (HTML, CSS e JavaScript, senza
 4. **Il grande giorno**: cerimonia, ricevimento, programma e dress code
 5. **RSVP**: modulo di conferma (presenza, numero di ospiti, allergie, canzone da ballare)
 6. **Regalo**: l'itinerario in Giappone e l'IBAN con pulsante "Copia"
-7. **FAQ** e foglie d'acero che cadono (il *momiji*, l'autunno giapponese)
+7. **FAQ** e petali di ciliegio che cadono (i *sakura*, la primavera giapponese)
 
 ## Cosa personalizzare
 

@@ -3,7 +3,7 @@
    ========================================================= */
 const CONFIG = {
   // Data e ora della cerimonia (ora italiana)
-  weddingDate: "2027-11-24T11:00:00+01:00",
+  weddingDate: "2027-04-24T11:00:00+02:00",
 
   // Dove arrivano le conferme RSVP.
   // Opzione consigliata: Google Apps Script collegato a un Google Sheet (vedi README.md)
@@ -16,8 +16,8 @@ const CONFIG = {
   calendar: {
     title: "Matrimonio di Tommaso & Margherita",
     location: "[Nome della chiesa], [Città]",
-    start: "20271124T100000Z", // 11:00 ora italiana
-    end: "20271125T000000Z",
+    start: "20270424T090000Z", // 11:00 ora italiana
+    end: "20270424T220000Z",
   },
 
   // Foto della galleria: metti i file nella cartella images/ con questi nomi.
@@ -187,11 +187,11 @@ $("#add-calendar").addEventListener("click", () => {
   const ics = [
     "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Tommaso e Margherita//IT",
     "BEGIN:VEVENT",
-    "UID:matrimonio-tommaso-margherita-20271124",
+    "UID:matrimonio-tommaso-margherita-20270424",
     `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
     `DTSTART:${c.start}`, `DTEND:${c.end}`,
     `SUMMARY:${c.title}`, `LOCATION:${c.location}`,
-    "DESCRIPTION:Non vediamo l'ora di festeggiare con te! 🍁",
+    "DESCRIPTION:Non vediamo l'ora di festeggiare con te! 🌸",
     "BEGIN:VALARM", "TRIGGER:-P7D", "ACTION:DISPLAY", "DESCRIPTION:Tra una settimana ci sposiamo!", "END:VALARM",
     "END:VEVENT", "END:VCALENDAR",
   ].join("\r\n");
@@ -260,7 +260,7 @@ $("#add-calendar").addEventListener("click", () => {
         <div class="rsvp__thanks">
           <h3>${yes ? "Evviva! 🎉" : "Ci mancherai 💛"}</h3>
           <p>${yes
-            ? `Grazie ${data.nome.split(" ")[0]}, non vediamo l'ora di festeggiare con te il 24 novembre 2027!`
+            ? `Grazie ${data.nome.split(" ")[0]}, non vediamo l'ora di festeggiare con te il 24 aprile 2027!`
             : `Grazie ${data.nome.split(" ")[0]} per averci avvisato. Ti penseremo!`}</p>
         </div>`;
       if (yes) burst();
@@ -287,13 +287,13 @@ $("#copy-iban").addEventListener("click", async () => {
   toast("IBAN copiato! Grazie di cuore 🇯🇵");
 });
 
-/* ---------- Foglie d'acero che cadono ---------- */
+/* ---------- Petali di ciliegio che cadono ---------- */
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function spawnLeaf(emoji) {
   const box = $(".leaves");
   const leaf = document.createElement("span");
   leaf.className = "leaf";
-  leaf.textContent = emoji || (Math.random() > 0.3 ? "🍁" : "🍂");
+  leaf.textContent = emoji || (Math.random() > 0.3 ? "🌸" : "💮");
   leaf.style.left = Math.random() * 100 + "vw";
   leaf.style.setProperty("--s", 12 + Math.random() * 16 + "px");
   leaf.style.setProperty("--d", 9 + Math.random() * 8 + "s");
@@ -303,7 +303,7 @@ function spawnLeaf(emoji) {
 }
 function burst() {
   if (reduceMotion) return;
-  for (let i = 0; i < 40; i++) setTimeout(() => spawnLeaf(["🍁", "🎉", "💛", "🌸"][i % 4]), i * 60);
+  for (let i = 0; i < 40; i++) setTimeout(() => spawnLeaf(["🌸", "🎉", "💛", "💮"][i % 4]), i * 60);
 }
 if (!reduceMotion) {
   for (let i = 0; i < 4; i++) setTimeout(spawnLeaf, i * 900);
