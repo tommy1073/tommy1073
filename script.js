@@ -22,11 +22,12 @@ const CONFIG = {
 
   // Foto della galleria: metti i file nella cartella images/ con questi nomi.
   // size: "tall" (alta), "wide" (larga) oppure "" (normale)
+  // focus (facoltativo): quale parte della foto tenere visibile, es. "center 30%" (30% = verso l'alto)
   photos: [
     { src: "images/foto1.jpg", caption: "Il nostro primo viaggio", emoji: "✈️", size: "tall" },
-    { src: "images/foto2.jpg", caption: "Tramonto al mare", emoji: "🌅", size: "" },
-    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "" },
-    { src: "images/foto4.jpg", caption: "Weekend in città", emoji: "🏛️", size: "wide" },
+    { src: "images/foto2.jpg", caption: "Tramonto al mare", emoji: "🌅", size: "", focus: "center 60%" },
+    { src: "images/foto3.jpg", caption: "In montagna", emoji: "🏔️", size: "", focus: "center 12%" },
+    { src: "images/foto4.jpg", caption: "Weekend in città", emoji: "🏛️", size: "wide", focus: "center 52%" },
     { src: "images/foto5.jpg", caption: "Cene tra amici", emoji: "🍝", size: "" },
     { src: "images/foto6.jpg", caption: "Road trip", emoji: "🚗", size: "tall" },
     { src: "images/foto7.jpg", caption: "Il giorno della proposta", emoji: "💍", size: "wide" },
@@ -133,6 +134,7 @@ function toast(msg) {
       <span class="gallery__ph">${p.emoji || "📷"}<small>Aggiungi ${p.src}</small></span>
       <figcaption>${p.caption}</figcaption>`;
     const img = $("img", fig);
+    if (p.focus) img.style.objectPosition = p.focus;
     img.addEventListener("error", () => fig.classList.add("is-placeholder"));
     img.addEventListener("load", () => loaded.push(i));
     fig.addEventListener("click", () => {
