@@ -3,7 +3,7 @@
    ========================================================= */
 const CONFIG = {
   // Data e ora della cerimonia (ora italiana)
-  weddingDate: "2027-04-24T11:00:00+02:00",
+  weddingDate: "2027-04-24T15:00:00+02:00",
 
   // Dove arrivano le conferme RSVP.
   // Opzione consigliata: Google Apps Script collegato a un Google Sheet (vedi README.md)
@@ -15,8 +15,8 @@ const CONFIG = {
   // Evento per "Aggiungi al calendario"
   calendar: {
     title: "Matrimonio di Tommaso & Margherita",
-    location: "[Nome della chiesa], [Città]",
-    start: "20270424T090000Z", // 11:00 ora italiana
+    location: "Pieve di S. Alessandro a Giogoli, Via Sant'Alessandro a Giogoli 1, 50018 Scandicci (FI)",
+    start: "20270424T130000Z", // 15:00 ora italiana
     end: "20270424T220000Z",
   },
 
@@ -193,7 +193,7 @@ $("#add-calendar").addEventListener("click", () => {
     "UID:matrimonio-tommaso-margherita-20270424",
     `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
     `DTSTART:${c.start}`, `DTEND:${c.end}`,
-    `SUMMARY:${c.title}`, `LOCATION:${c.location}`,
+    `SUMMARY:${c.title}`, `LOCATION:${c.location.replace(/,/g, "\\,")}`,
     "DESCRIPTION:Non vediamo l'ora di festeggiare con te! 🌸",
     "BEGIN:VALARM", "TRIGGER:-P7D", "ACTION:DISPLAY", "DESCRIPTION:Tra una settimana ci sposiamo!", "END:VALARM",
     "END:VEVENT", "END:VCALENDAR",
